@@ -16,8 +16,6 @@ include_once('lib/cubetech-group.php');
 
 add_image_size( 'cubetech-future-icon', 855, 550, true );
 
-wp_register_style('cubetech-date-picker-css', plugins_url('assets/css/jquery-ui.css', __FILE__) );
-wp_enqueue_style('cubetech-date-picker-css');
 wp_enqueue_script('jquery');
 wp_register_script('cubetech_future_js', plugins_url('assets/js/cubetech-future.js', __FILE__), 'jquery');
 wp_enqueue_script('cubetech_future_js');
@@ -27,7 +25,6 @@ add_action('wp_enqueue_scripts', 'cubetech_future_add_styles');
 function cubetech_future_add_styles() {
 	wp_register_style('cubetech-future-css', plugins_url('assets/css/cubetech-future.css', __FILE__) );
 	wp_enqueue_style('cubetech-future-css');
-
 }
 add_filter( 'template_include', 'cubetech_future_template', 1 );
 
@@ -41,6 +38,12 @@ function cubetech_future_template($template_path) {
             } else {
                 $template_path = plugin_dir_path( __FILE__ ) . '/templates/single.php';
             }
+        } else if ( is_archive() ) {
+            if ( $theme_file = locate_template( array ( 'single-future.php' ) ) ) {
+                $template_path = $theme_file;
+            } else {
+                $template_path = plugin_dir_path( __FILE__ ) . '/templates/archive-future.php';
+            }  
         }
     }
     return $template_path;

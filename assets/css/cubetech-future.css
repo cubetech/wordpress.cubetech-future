@@ -13,12 +13,12 @@
 }  
 .cubetech-future {
 	position: static;
-	/* moves everything one picture width left so that if the first slider button clicked is the right one, there is an image on the left to slide over to the right insteado of a blank space */
 	list-style-type: none; 
 	margin: 0px;
 	padding: 0px;
 	width:100%;
 	display: inline-block;
+	height: 100%;
 }
 .cubetech-future li { 
 	/*z-index: 10;
@@ -61,9 +61,38 @@
 	width: 45px;
 	background-position:center; 
 }
+#left_arrow_future_overview {
+	cursor:pointer;
+	position: absolute; 
+	float: right; 
+	right: 42px;; 
+	bottom: 38px;
+	background: url('../img/arrow-left.png') no-repeat;
+	height: 45px;
+	width: 45px;
+	background-position:center; 
+	z-index: 100;
+}
+#right_arrow_future_overview {
+	cursor:pointer;
+	position: absolute;
+	float: right;
+	right: 7px;;
+	bottom: 38px;
+	background: url('../img/arrow-right.png') no-repeat;
+	height: 45px;
+	width: 45px;
+	background-position:center; 
+}
 
 .cubetech-future-progress {
 	height: 2px;
 	position: relative;
 	bottom: 0;
+}
+
+.cubetech-future-overview-progress {
+	height: 2px;
+	position: relative;
+	bottom: 1px;
 }

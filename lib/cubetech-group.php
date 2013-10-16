@@ -19,7 +19,7 @@ function cubetech_future_create_taxonomy() {
 		'show_ui'             => true,
 		'show_admin_column'   => true,
 		'query_var'           => true,
-		'rewrite'             => array( 'slug' => 'cubetech_future' )
+		'rewrite'             => array( 'slug' => 'future_overview' )
 	);
 
 	register_taxonomy( 'cubetech_future_group', array( 'cubetech_future' ), $args );
