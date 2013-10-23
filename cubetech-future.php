@@ -15,16 +15,14 @@ include_once('lib/cubetech-settings.php');
 include_once('lib/cubetech-group.php');
 
 add_image_size( 'cubetech-future-icon', 855, 550, true );
-
-wp_enqueue_script('jquery');
-wp_register_script('cubetech_future_js', plugins_url('assets/js/cubetech-future.js', __FILE__), 'jquery');
-wp_enqueue_script('cubetech_future_js');
-
 add_action('wp_enqueue_scripts', 'cubetech_future_add_styles');
 
 function cubetech_future_add_styles() {
 	wp_register_style('cubetech-future-css', plugins_url('assets/css/cubetech-future.css', __FILE__) );
 	wp_enqueue_style('cubetech-future-css');
+	wp_enqueue_script('jquery');
+	wp_register_script('cubetech_future_js', plugins_url('assets/js/cubetech-future.js', __FILE__), 'jquery');
+	wp_enqueue_script('cubetech_future_js');
 }
 add_filter( 'template_include', 'cubetech_future_template', 1 );
 
