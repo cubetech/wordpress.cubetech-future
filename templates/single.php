@@ -31,9 +31,11 @@
 			echo $contentreturn . '</ul> '; 
 		?>
 		<div class="content-overlay">
+		<div class="overlay">
 			<p class="content-date"><?php the_date(); ?></p>
 			<p class="content-title"><?php the_title(); ?></p>
 			<?php the_content(); ?>
+		</div>
 			<a id="futureminimize" href="#"><span class="minuscontent">-</span> Info</a>
 		</div>
 		<a id="futuremaximize" href="#"><span class="pluscontent">+</span> Info</a>
