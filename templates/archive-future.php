@@ -4,7 +4,9 @@ $counter = 2;
 $count = 0;
 $numberposts = 6;
 ?>
+<p class="future-title-mobile">Übersicht Future</p>
 <div class="future-overview">
+
 	<?php
 	foreach( $categories as $category ):
 
@@ -56,7 +58,9 @@ $numberposts = 6;
 		endforeach;
 		endforeach;
 		?>
+		
 </div>
+
 <div id="left_arrow_future_overview"></div>
 <div id="right_arrow_future_overview"></div>
 <div class="cubetech-future-overview-progress"></div>

@@ -32,17 +32,15 @@
 	position: absolute;
 	top: 0;
 }
-
 .cubetech-future li img {
-	height: 100%;
+	height: auto;
 	width: 100%;
 }
-
 #left_arrow_future {
 	cursor:pointer;
 	position: absolute; 
 	float: right; 
-	right: 27px;; 
+	right: 27px; 
 	bottom: 43px;
 	background: url('../img/arrow-left.png') no-repeat;
 	height: 45px;
@@ -54,7 +52,7 @@
 	cursor:pointer;
 	position: absolute;
 	float: right;
-	right: -8px;;
+	right: -8px;
 	bottom: 43px;
 	background: url('../img/arrow-right.png') no-repeat;
 	height: 45px;
@@ -65,7 +63,7 @@
 	cursor:pointer;
 	position: absolute; 
 	float: right; 
-	right: 42px;; 
+	right: 42px;
 	bottom: 38px;
 	background: url('../img/arrow-left.png') no-repeat;
 	height: 45px;
@@ -73,24 +71,31 @@
 	background-position:center; 
 	z-index: 100;
 }
+.future-title-mobile{
+	display: block;
+	margin-left: 135px;
+	font-size: 27px;
+	line-height: 40px;
+	position: absolute;
+	margin-top: -87px;
+	width: 150px;
+}
 #right_arrow_future_overview {
 	cursor:pointer;
 	position: absolute;
 	float: right;
-	right: 7px;;
+	right: 7px;
 	bottom: 38px;
 	background: url('../img/arrow-right.png') no-repeat;
 	height: 45px;
 	width: 45px;
 	background-position:center; 
 }
-
 .cubetech-future-progress {
 	height: 2px;
 	position: relative;
 	bottom: 0;
 }
-
 .cubetech-future-overview-progress {
 	height: 2px;
 	position: relative;
