@@ -8,15 +8,23 @@ $numberposts = 6;
 <div class="future-overview">
 
 	<?php
-	foreach( $categories as $category ):
+	
+	
+	
+	$categorie    = get_query_var($wp_query->query_vars['taxonomy']);
+
 
       //select posts in this category (term), and of a specified content type (post type) 
       $posts = get_posts(array(
         'post_type' => 'cubetech_future',
-        'taxonomy' => $category->taxonomy,
-        'term' => $category->slug,
+        'tax_query' => array(
+		array(
+			'taxonomy' => 'cubetech_future_group',
+			'field' => 'slug',
+			'terms' => $categorie,
+		)),
         'numberposts' => -1, // to show all posts in this category, could also use 'numberposts' => -1 instead
-      ));
+		));
       foreach($posts as $post): // begin cycle through posts of this category
        		setup_postdata($post); //set up post data for use in the loop (enables the_title(), etc without specifying a post ID)
         	$post_meta_data = get_post_custom($post->ID);
@@ -55,7 +63,6 @@ $numberposts = 6;
 			echo '</div>';
 		}
 		$count ++ ;	
-		endforeach;
 		endforeach;
 		?>
 		

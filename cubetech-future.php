@@ -14,7 +14,7 @@ include_once('lib/cubetech-post-type.php');
 include_once('lib/cubetech-settings.php');
 include_once('lib/cubetech-group.php');
 
-add_image_size( 'cubetech-future-icon', 855, 550, true );
+add_image_size( 'cubetech-future-icon', 855);
 add_action('init', 'cubetech_future_add_styles');
 
 function cubetech_future_add_styles() {
