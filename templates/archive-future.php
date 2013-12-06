@@ -30,9 +30,7 @@ $numberposts = 6;
         	$post_meta_data = get_post_custom($post->ID);
 			$post_meta = get_post($post->ID);
 			//$titlelink = array('', '');
-
-			
-		
+			$date = get_the_date();
 			if($count % $numberposts == 0){
 				echo '<div class="grid">';
 			}
@@ -49,7 +47,7 @@ $numberposts = 6;
 		    <article id="post-<?php the_ID(); ?>" style="background: url(<?php echo $image[0]; ?>) no-repeat center center;" class="col-sm-6" >
 				<div class="archive-entry">	
 		          <p class="overview-title"><?php the_title(); ?></p>
-		          <p class="overview-date"><?php the_date(); ?></p>
+		          <p class="overview-date"><?php echo $date; ?></p>
 				</div>
 		        <?php echo get_post_meta($post->ID, 'field_key', true); ?>
 		    </article>
