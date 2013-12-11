@@ -155,3 +155,6 @@
 	bottom: 1px;
 }
 .single-cubetech_future .menu-future > .sub-menu { display: block; }
+.single-cubetech_future .content-box {
+	height: 550px !important;
+}

@@ -13,8 +13,7 @@
 				$titlelink = array('', '');
 				if(isset($post_meta_data['cubetech_future_movie']))
 					$youtube = $post_meta_data['cubetech_future_movie'];
-				
-				if($youtube[0] !== '') {
+				if($youtube[0] != '') {
 					$contentreturn .= '
 					<iframe width="100%" height="100%" src="//www.youtube.com/embed/' . $youtube[0] . '" frameborder="0" allowfullscreen></iframe>';
 				}
