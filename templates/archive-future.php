@@ -65,7 +65,11 @@ $numberposts = 6;
 		?>
 		
 </div>
-
+<?php if(preg_match("!MSIE\ [876]\.!i",$_SERVER['HTTP_USER_AGENT'])) { ?>
+<div id="left_arrow_future_overview" style="background: url(/assets/img/arrow-left.png) center center no-repeat;"></div>
+<div id="right_arrow_future_overview" style="background: url(/assets/img/arrow-right.png) center center no-repeat;"></div>
+<?php } else { ?>
 <div id="left_arrow_future_overview"></div>
 <div id="right_arrow_future_overview"></div>
+<?php } ?>	
 <div class="cubetech-future-overview-progress"></div>

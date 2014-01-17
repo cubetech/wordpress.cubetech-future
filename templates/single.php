@@ -39,8 +39,13 @@
 		</div>
 		<a id="futuremaximize" href="#"><span class="pluscontent">+</span> Info</a>
 	</div>
+	<?php if(preg_match("!MSIE\ [876]\.!i",$_SERVER['HTTP_USER_AGENT'])) { ?>
+	<div id="left_arrow_future" style="background: url(/assets/img/arrow-left.png) center center no-repeat;"></div>
+	<div id="right_arrow_future" style="background: url(/assets/img/arrow-right.png) center center no-repeat;"></div>
+	<?php } else { ?>
 	<div id="left_arrow_future"></div>
 	<div id="right_arrow_future"></div>
+	<?php } ?>		
 	<div class="button-left-mobile"><a href="#">Projektinfos</a></div>
 	<div class="button-right-mobile"><a href="#">Nächstes >></a></div>
 	<div class="cubetech-future-progress"></div>
